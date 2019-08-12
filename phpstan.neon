@@ -1,0 +1,12 @@
+parameters:
+	ignoreErrors:
+		# No replacement before doctrine/annotations 2.0
+		- '#^Call to deprecated method registerLoader\(\) of class Doctrine\\Common\\Annotations\\AnnotationRegistry.+#'
+
+		# Method should be probably removed from interface
+		- '#^Parameter .+ of method .+\:\:hook\(\) should be contravariant with parameter .+ of method Tlapnet\\Modalus\\Hook\\IHookManager\:\:hook\(\)#'
+		- '#^Parameter .+ of method .+\:\:register\(\) should be contravariant with parameter .+ of method Tlapnet\\Modalus\\Model\\IModalContainer\:\:register\(\)$#'
+
+		# Won't fix
+		- path: %currentWorkingDirectory%/src/Latte/ModalusMacro.php
+		  message: '#^Only booleans are allowed in a negated boolean, string given\.$#'
