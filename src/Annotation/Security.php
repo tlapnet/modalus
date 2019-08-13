@@ -11,22 +11,25 @@ use Doctrine\Common\Annotations\Annotation\Target;
 final class Security
 {
 
-	/** @var string|null */
-	private $role;
+	/** @var string[]|null */
+	private $roles;
 
 	/**
 	 * @param mixed[] $values
 	 */
 	public function __construct(array $values)
 	{
-		if (isset($values['role'])) {
-			$this->role = $values['role'];
+		if (isset($values['roles'])) {
+			$this->roles = $values['roles'];
 		}
 	}
 
-	public function getRole(): ?string
+	/**
+	 * @return string[]|null
+	 */
+	public function getRoles(): ?array
 	{
-		return $this->role;
+		return $this->roles;
 	}
 
 }

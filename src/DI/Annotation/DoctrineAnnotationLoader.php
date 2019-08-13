@@ -95,7 +95,7 @@ class DoctrineAnnotationLoader
 		$metadata = [
 			'name' => null,
 			'security' => [
-				'role' => null,
+				'roles' => null,
 			],
 		];
 
@@ -111,7 +111,7 @@ class DoctrineAnnotationLoader
 			// Parse @Security
 			if (get_class($annotation) === Security::class) {
 				/** @var Security $annotation */
-				$metadata['security']['role'] = $annotation->getRole();
+				$metadata['security']['roles'] = $annotation->getRoles();
 
 				continue;
 			}
