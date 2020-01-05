@@ -19,7 +19,7 @@
     "php": "^7.2",
     "contributte/utils": "^0.4.0",
     "doctrine/annotations": "^1.6",
-    "latte/latte": "~2.5.1",
+    "latte/latte": "~2.5.1|~2.6.0",
     "nette/application": "~3.0.0",
     "nette/di": "~3.0.0"
   },
