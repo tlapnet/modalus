@@ -2,15 +2,16 @@
 <ruleset>
 	<rule ref="./vendor/ninjify/coding-standard/contributte.xml">
 		<exclude name="Squiz.Commenting.FunctionComment.InvalidTypeHint"/>
+		<exclude name="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.NoAssignment"/>
 	</rule>
 
 	<!-- Package specific rules -->
 	<rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
 		<properties>
 			<property name="rootNamespaces" type="array" value="
-                src=>Tlapnet\Modalus,
-                tests=>Tests\Tlapnet\Modalus,
-            "/>
+				src=>Tlapnet\Modalus,
+				tests=>Tests\Tlapnet\Modalus,
+			"/>
 		</properties>
 	</rule>
 
