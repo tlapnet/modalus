@@ -1,3 +1,9 @@
+includes:
+	- vendor/phpstan/phpstan-deprecation-rules/rules.neon
+	- vendor/phpstan/phpstan-nette/extension.neon
+	- vendor/phpstan/phpstan-nette/rules.neon
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
+
 parameters:
 	ignoreErrors:
 		# No replacement before doctrine/annotations 2.0
@@ -10,3 +16,9 @@ parameters:
 		# Won't fix
 		- path: %currentWorkingDirectory%/src/Latte/ModalusMacro.php
 		  message: '#^Only booleans are allowed in a negated boolean, string given\.$#'
+
+		# Static
+		- '#^Unsafe usage of new static\(\)\.$#'
+
+		# Class-string
+		- '#^Parameter \#1 \$class of method .+::.+\(\) expects class-string, string given\.$#'

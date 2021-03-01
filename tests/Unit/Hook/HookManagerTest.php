@@ -43,7 +43,7 @@ class HookManagerTest extends TestCase
 			return null;
 		});
 		$manager->hook('ok', function ($arg) {
-			return $arg .= 'foo';
+			return $arg . 'foo';
 		});
 
 		$optional = $manager->apply('ok', 'a_');

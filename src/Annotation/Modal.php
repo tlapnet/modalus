@@ -26,7 +26,7 @@ final class Modal
 
 		$value = $values['value'];
 
-		if ($value === null || $value === '') {
+		if (strlen((string) $value) <= 0) {
 			throw new AnnotationException('Empty @Modal name given');
 		}
 

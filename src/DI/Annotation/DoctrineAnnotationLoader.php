@@ -86,6 +86,7 @@ class DoctrineAnnotationLoader
 	}
 
 	/**
+	 * @param class-string $class
 	 * @return mixed[]
 	 */
 	private function parseModalAnnotations(string $class): array
@@ -126,6 +127,7 @@ class DoctrineAnnotationLoader
 	}
 
 	/**
+	 * @param class-string $class
 	 * @return mixed[]
 	 */
 	private function parseHookAnnotations(string $class): array
