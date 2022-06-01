@@ -55,7 +55,7 @@ class ModalusMacro extends MacroSet
 					? trim($node->tokenizer->joinUntil(','), '\'')
 					: $node->tokenizer->joinUntil(',');
 
-				$params[$this->component . '-args[' . $id . ']'] = trim($value);
+				$params['"'.$this->component . '-args[' . $id . ']"'] = trim($value);
 			}
 		}
 
